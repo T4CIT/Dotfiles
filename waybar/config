@@ -1,0 +1,39 @@
+{
+    // General Settings
+
+    // Position TOP
+    "position": "top",
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    // Load Modules
+    "include": ["~/.config/waybar/modules.json"],
+
+    // Modules Left
+    "modules-left": [
+        //"custom/logo",
+        "custom/workspace-candy",
+        "hyprland/workspaces",
+        "group/settings",
+        "group/quicklinks"
+    ],
+
+    // Modules Center
+    "modules-center": [	
+    ],
+
+    // Modules Right    
+    "modules-right": [
+        "memory",
+        "cpu",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "battery#BAT0",
+        "battery#BAT1",
+	"clock"
+    ]
+}

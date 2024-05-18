@@ -1,0 +1,73 @@
+[keyboard]
+bindings = [
+    { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+[font]
+size = 12.0
+offset.x = -1  # For letter spacing (default: 0)
+
+[font.normal]
+family = "SFMono"
+style= "Medium"
+
+[font.bold]
+family = "SFMono"
+style = "Bold"
+
+[font.bold_italic]
+family = "SFMono"
+style = "Bold Italic"
+
+[font.italic]
+family = "SFMono"
+style = "Italic"
+
+[window]
+opacity = 0.7
+decorations = "Full"
+
+[window.padding]
+x = 15
+y = 15
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+# Default colors
+[colors.primary]
+background = '#c2bda6'
+foreground = '#48463d'
+
+[colors.cursor]
+text = '#c2bda6'
+cursor = '#48463d'
+
+[colors.selection]
+text = '#c2bda6'
+background = '#48463d'
+
+# Normal colors
+[colors.normal]
+black   = '#c2bda6' # Main Beige
+# red     = '#076678' # Navy
+red	= '#9d0006' # Dark Red
+green   = '#F15A22' # Orange
+yellow  = '#f9f5d7' # Eggshell | htop bold
+# blue    = '#9d0006' # Dark Red
+blue	= '#076678' # Navy | Folders, Comments
+magenta = '#427b58' # Dark Green | htop user is process
+cyan    = '#48463d' # Main Grey
+white   = '#48463d' # Main Grey | CLI Suggestions, Path
+
+# Bright colors
+#[colors.bright]
+#black   = '#23272c'
+#red     = '#66a5cc'
+#green   = '#59b0f2'
+#yellow  = '#4bb0d3'
+#blue    = '#487092'
+#magenta = '#50829e'
+#cyan    = '#658795'
+#white   = '#4d676b'
+

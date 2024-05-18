@@ -1,0 +1,289 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *
+ * ----------------------------------------------------- */
+
+/* -----------------------------------------------------
+ * Nord Theme 
+ * ----------------------------------------------------- */
+
+/* Polar Night */
+@define-color nord0 #2E3440;
+@define-color nord1 #3B4252;
+@define-color nord2 #434C5E;
+@define-color nord3 #4C566A;
+/* Snow Storm */
+@define-color nord4 #D8DEE9;
+@define-color nord5 #E5E9F0;
+@define-color nord6 #ECEFF4;
+/* Frost */
+@define-color nord7 #7FBCBB;
+@define-color nord8 #88C0D0;
+@define-color nord9 #81A1C1;
+@define-color nord10 #5E81AC;
+/* Aurora */
+@define-color nord11 #BF616A;
+@define-color nord12 #D08770;
+@define-color nord13 #EBCB8B;
+@define-color nord14 #A3BE8C;
+@define-color nord15 #B48EAD;
+
+/* -----------------------------------------------------
+ * Seashells 
+ * ----------------------------------------------------- */
+
+@define-color seashellsBackground #061923;
+@define-color seashellsForeground #E5C49E;
+@define-color seashells1 #1D485F; /* Oslo Blue */
+@define-color seashells2 #DB662D; /* Orange */
+@define-color seashells3 #FEAF3C; /* Mustard */
+@define-color seashells4 #255A62; /* Green-Blue */
+@define-color seashells5 #008EAB; /* Bright Oslo Blue */
+@define-color seashells6 #77DBF4; /* Bright Cyan */
+@define-color seashells7 #5FB1C2; /* Light Blue */
+
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+    font-family: "Cozette";
+    /*font-weight: 500;*/
+    border: none;
+    border-radius: 0px;
+    font-size: 15px;
+    min-height: 20px;
+    color: @seashellsForeground;
+}
+
+window#waybar {
+    
+    background: @seashellsBackground;
+    transition-property: background-color;
+    transition-duration: .5s;
+    
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+#custom-workspace-candy {
+    margin: 0px 5px 0px 20px;
+    /*border-radius: 25px 0px 0px 25px;*/
+}
+
+#workspaces {
+
+}
+
+#workspaces button {
+    /*transition: all 0.5s ease-in-out;*/
+}
+
+#workspaces button.active {
+
+}
+
+#workspaces button:hover {
+    background: none; 
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    border-radius: 10px;
+    background-color: @seashellsBackground;
+    opacity:0.5;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: @textcolor2;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+   
+}
+
+window#waybar.empty #window {
+    background-color:transparent;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* -----------------------------------------------------
+ * Idle Inhibator
+ * ----------------------------------------------------- */
+
+ #idle_inhibitor {
+    margin-right: 15px;
+}
+
+#idle_inhibitor.activated {
+    margin-right: 15px;
+}
+
+/* -----------------------------------------------------
+ * Custom Modules
+ * ----------------------------------------------------- */
+
+#custom-logo { 
+
+}
+
+/* -----------------------------------------------------
+ * Custom Exit
+ * ----------------------------------------------------- */
+
+#custom-exit {
+    margin: 0px 20px 0px 0px;
+    padding:0px;
+}
+
+/* -----------------------------------------------------
+ * Hardware Group
+ * ----------------------------------------------------- */
+
+ #disk,#memory,#cpu,#language {
+    margin:0px;
+    padding:0px;
+}
+
+#language {
+    margin-right:10px;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+    margin: 0px 20px 0px 6px;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+    margin: 0px 6px;
+}
+
+#pulseaudio.muted {
+
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+    margin: 0px 6px;
+}
+
+#network.ethernet {
+   
+}
+
+#network.wifi {
+    
+}
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+
+ #bluetooth, #bluetooth.on, #bluetooth.connected {
+    /*background-color: @backgrounddark;*/
+    margin: 0px 6px;
+}
+
+#bluetooth.off {
+    
+}
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery {
+    /*background-color: @backgrounddark;*/
+    margin: 0px 6px;
+}
+
+#battery.BAT0 {
+    padding: 0px 0px 0px 5px;
+}
+
+#battery.charging, #battery.plugged {
+   
+}
+
+@keyframes blink {
+    to {
+        /*background-color: @textcolor2;*/
+        color: @textcolor3;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    margin:0px 10px 0px 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
+label:focus {
+    background-color: #000000;
+}
+
+#backlight {
+    background-color: #90b1b1;
+}
+
