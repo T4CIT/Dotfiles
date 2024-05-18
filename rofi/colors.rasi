@@ -1,0 +1,8 @@
+* {
+    background:			#061923;
+    alternate-background: 	#061923;
+    foreground:			#E5C49E;
+    selected:			#DB662D; /* Orange */
+    active:			#77DBF4; /* Cyan */
+    urgent:			#FEAF3C; /* Mustard */
+}
